@@ -27,10 +27,26 @@ char *mystrncat(char *dest, char *src, int len){
   mystrncpy(mystrlen(dest)+dest,src,len);
   return dest;
 }
+int mystrcmp(char *s1, char *s2){
+  while(*s1 == *s2 && *s1 && *s2){
+    s1++;
+    s2++;
+  }
+  return *s1 - *s2;
+}
+int mystrncmp(char *s1,char *s2, int len){
+  
+}
 int main(){
   char a[100] = "cool";
   char b[20] = "cat";
-  printf("%s\n",mystrncpy(a,b,4));
-  printf("%s\n",mystrncat(a,b,2));
+//  printf("%s\n",mystrncpy(a,b,4));
+//  printf("%s\n",mystrncat(a,b,2));
+  char c[10]="abcde";
+  char d[10]="abc";
+  //printf("%d\n",mystrcmp(c,d));
+  //printf("%d\n",strcmp(c,d));
+  printf("%d\n",mystrncmp(c,d,3));
+  printf("%d\n",strncmp(c,d,3));
   return 0;
 }
