@@ -19,10 +19,13 @@ char *mystrncpy(char *dest, char *src, size_t len){
   for(;i<len;i++)dest[i] = 0;
   return dest;
 }
-
+char *mystrcat(char *dest, char *src){
+  mystrcpy(mystrlen(dest)+dest,src);
+  return dest;
+}
 int main(){
-  char a[100] = "dankest";
-  char b[20] = "meme";
-  printf("%s\n",mystrcpy(a,b));
+  char a[100] = "cool";
+  char b[20] = "cat";
+  printf("%s\n",mystrcat(a,b));
   return 0;
 }
