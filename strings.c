@@ -67,7 +67,7 @@ int main(){
   printf("str1 after strncat(length 2): %s\n\n",mystrncat(str1,str2,2));
   printf("Testing strcmp...\n");
   printf("comparing abcd to abc:  %d\n",mystrcmp("abcd","abc"));
-  printf("comparing abcd to abcz: %d\n",mystrcmp("abcd","abce"));
+  printf("comparing abcd to abcz: %d\n",mystrcmp("abcd","abcz"));
   printf("comparing abcd to abcd:  %d\n\n",mystrcmp("abcd","abcd"));
   printf("Testing strchr...\n");
   char haystack[]="octopus";
